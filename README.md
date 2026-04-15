@@ -1,5 +1,5 @@
 # Programación Genética - Proyecto
-
+![Diagrama del sistema](computo_genetico/data/f1_f2.png)
 
 ## Descripción
 
