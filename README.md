@@ -11,7 +11,7 @@ es una combinación de funciones y terminales evaluadas sobre un conjunto
 de datos.
 
 
-El diseño modular permite extender fácilmente el sistema, modificar
+El diseño permite extender fácilmente el sistema, modificar
 operadores genéticos y adaptar el comportamiento a distintos problemas.
 
 

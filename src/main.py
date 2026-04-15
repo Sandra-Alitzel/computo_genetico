@@ -1,38 +1,28 @@
-from core.population import Population
+from core.genetic_programming import GeneticProgramming
 from problems.boolean_problem import BooleanProblem
-from operators.selection import tournament_selection
-
 
 def main():
     F1 = ["AND", "OR", "NOT"]
     T = ["A", "B", "C", 0, 1]
 
+    problem = BooleanProblem("computo_genetico/data/TablaParidad.csv")
 
-    problem = BooleanProblem("data/TablaParidad.csv")
-
-
-    population = Population(
-        size=20,
+    gp = GeneticProgramming(
+        population_size=50,
         function_set=F1,
         terminal_set=T,
-        max_depth=3
+        max_depth=5,
+        crossover_rate=0.9,
+        mutation_rate=0.3,
+        generations=30
     )
 
+    best = gp.run(problem)
 
-    # 🔹 AQUÍ se define evaluated
-    evaluated = population.evaluate(problem)
-
-
-    # 🔹 ahora sí puedes usarlo
-    selected = tournament_selection(evaluated, k=3)
-
-
-    print("Seleccionado:")
-    print(selected)
-
+    print("\nMEJOR SOLUCIÓN FINAL:")
+    print(best.tree)
+    print("Fitness:", best.fitness)
 
 if __name__ == "__main__":
     main()
-
-
 
