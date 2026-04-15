@@ -2,10 +2,11 @@ from core.tree import Tree
 from core.individual import Individual
 
 class Population:
-    def __init__(self, size, function_set, terminal_set, max_depth):
+    def __init__(self, size, function_set, terminal_set, functions, max_depth):
         self.size = size
         self.function_set = function_set
         self.terminal_set = terminal_set
+        self.functions = functions
         self.max_depth = max_depth
 
         self.individuals = self.initialize()
@@ -13,7 +14,12 @@ class Population:
     def initialize(self):
         return [
             Individual(
-                Tree(self.function_set, self.terminal_set, self.max_depth)
+                Tree(
+                    self.function_set,
+                    self.terminal_set,
+                    self.functions,   # 👈 clave
+                    self.max_depth
+                )
             )
             for _ in range(self.size)
         ]

@@ -12,6 +12,7 @@ class BooleanProblem:
                 # Convertir a enteros
                 parsed_row = {k: int(v) for k, v in row.items()}
                 data.append(parsed_row)
+               
         return data
 
 

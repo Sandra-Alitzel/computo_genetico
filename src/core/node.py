@@ -1,9 +1,8 @@
-from utils.functions import FUNCTIONS
-
 class Node:
-    def __init__(self, value, children=None):
+    def __init__(self, value, functions, children=None):
         self.value = value
         self.children = children or []
+        self.functions = functions
 
     def is_leaf(self):
         return len(self.children) == 0
@@ -15,8 +14,7 @@ class Node:
             return self.value
 
         args = [child.evaluate(context) for child in self.children]
-
-        func = FUNCTIONS[self.value]["function"]
+        func = self.functions[self.value]["function"]
         return func(*args)
 
     def get_all_nodes(self):
