@@ -179,18 +179,6 @@ El algoritmo sigue el siguiente proceso:
 ------------------------------------------------------------------------
 
 
-## Características Clave
-
-
--   Uso de Programación Orientada a Objetos (POO)
--   Sistema modular y extensible
--   Diccionario de funciones configurable
--   Representación basada en árboles
--   Fácil adaptación a distintos problemas
-
-
-------------------------------------------------------------------------
-
 
 ## Uso
 
@@ -201,17 +189,6 @@ El algoritmo sigue el siguiente proceso:
 4.  Observar la evolución del fitness
 
 
-------------------------------------------------------------------------
-
-
-## Posibles Extensiones
-
-
--   Soporte para funciones matemáticas
--   Implementación de elitismo
--   Diferentes métodos de selección
--   Ajuste dinámico de operadores
--   Visualización de árboles
 
 
 
