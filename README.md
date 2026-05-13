@@ -1,6 +1,14 @@
 # Programación Genética - Proyecto
-![Diagrama del sistema](data/f1_f2.png)
+
+Evolutivo de tarea,
+Conteo de intrones, 
+ejecución:
+colocarse en carpeta src y ejecutar:
+streamlit run app.py
 ![APP INTERACTIVA](data/sistema.png)
+
+TAREA PASADA
+![Diagrama del sistema](data/f1_f2.png)
 
 
 ## Descripción
