@@ -1,5 +1,7 @@
 # Programación Genética - Proyecto
 ![Diagrama del sistema](computo_genetico/data/f1_f2.png)
+![APP INTERACTIVA](computo_genetico/data/sistema.png)
+
 
 ## Descripción
 

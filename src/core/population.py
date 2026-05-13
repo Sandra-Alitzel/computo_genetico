@@ -17,7 +17,7 @@ class Population:
                 Tree(
                     self.function_set,
                     self.terminal_set,
-                    self.functions,   # 👈 clave
+                    self.functions,  
                     self.max_depth
                 )
             )

@@ -1,8 +1,16 @@
+import copy
+
 class Node:
     def __init__(self, value, functions, children=None):
         self.value = value
         self.children = children or []
         self.functions = functions
+
+    def __deepcopy__(self, memo):
+        new_node = Node(self.value, self.functions)
+        memo[id(self)] = new_node
+        new_node.children = [copy.deepcopy(child, memo) for child in self.children]
+        return new_node
 
     def is_leaf(self):
         return len(self.children) == 0

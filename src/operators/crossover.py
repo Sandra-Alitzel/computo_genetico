@@ -12,8 +12,8 @@ def subtree_crossover(parent1, parent2):
     n1 = random.choice(nodes1)
     n2 = random.choice(nodes2)
 
-    new_root1 = p1.root.replace_node(n1, n2)
-    new_root2 = p2.root.replace_node(n2, n1)
+    new_root1 = p1.root.replace_node(n1, copy.deepcopy(n2))
+    new_root2 = p2.root.replace_node(n2, copy.deepcopy(n1))
 
     p1.root = new_root1
     p2.root = new_root2

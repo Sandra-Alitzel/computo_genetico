@@ -28,6 +28,13 @@ class Tree:
 
     def random_terminal(self):
         value = random.choice(self.terminal_set)
+        if value == "const":
+            # Usamos una distribución que favorezca lo pequeño para la forma,
+            # pero permita lo mediano para el desplazamiento.
+            if random.random() > 0.9:
+                return Node(random.uniform(-20, 20), self.functions) # Algunos saltos grandes
+            else:
+                return Node(random.uniform(-2, 2), self.functions)   # La mayoría pequeños
         return Node(value, self.functions)
 
 
